@@ -1,0 +1,41 @@
+modal{
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+    
+    background-color: gray;
+}
+.wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+    width: 220px;
+    border: 2px solid gray;
+    border-radius:20px;
+    color: black;
+   
+}
+.content{
+    position: relative;
+    border-radius:20px;
+    background-color: white;
+    color: red;
+    padding:10px;
+}
+.buttonOne{
+    position: absolute;
+    left: 80px;
+    top:35px;
+    color: green;
+    margin-right: 5px;
+}
+.buttonTwo{
+    position: absolute;
+    left: 120px;
+    top:35px;
+    color: green;
+    margin-left: 25px;
+}
