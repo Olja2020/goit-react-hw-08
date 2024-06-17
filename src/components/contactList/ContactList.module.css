@@ -3,8 +3,9 @@
   gap: 15px;
   flex-wrap: wrap;
   height: 230px;
+  justify-content: center;
 }
 .item {
-  width: 300px;
+  width: 250px;
   height: 100px;
 }
