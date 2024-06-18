@@ -6,7 +6,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { refreshUser } from "../redux/auth/operations";
 import { selectIsRefreshing } from "../redux/auth/selectors";
-//import ContactsPage from "../pages/contactsPage/ContactsPage";
+
 import {Toaster} from 'react-hot-toast';
 const HomePage = lazy(() => import("../pages/homePage/HomePage"));
 const RegistrationPage = lazy(() =>

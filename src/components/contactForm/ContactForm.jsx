@@ -1,4 +1,4 @@
-//import css from "./ContactForm.module.css";
+import css from "./ContactForm.module.css";
 //import { useId } from "react";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -34,53 +34,15 @@ export default function ContactForm() {
     actions.resetForm();
   };
   return (
-//     <Formik
-//       initialValues={{ name: "", number: "" }}
-//       onSubmit={handleSubmit}
-//       validationSchema={UserSchema}
-//     >
-//       <Form className={css.containerForm}>
-//         <div>
-//           <label htmlFor={`${fieldId}-username`} className={css.labelForm}>
-//             Name
-//           </label>
-//           <Field
-//             type="text"
-//             name="name"
-//             id={`${fieldId}-username`}
-//             className={css.inputForm}
-//           />
-//           <ErrorMessage name="name" component="span" className={css.error} />
-//         </div>
-//         <div>
-//           <label htmlFor={`${fieldId}-number`} className={css.labelForm}>
-//             Number
-//           </label>
-//           <Field
-//             type="text"
-//             name="number"
-//             id={`${fieldId}-number`}
-//             className={css.inputForm}
-//           />
-//           <ErrorMessage name="number" component="span" className={css.error} />
-//         </div>
-//         <button className={css.btnForm} type="submit">
-//           Add contact
-//         </button>
-//       </Form>
-//     </Formik>
-//   );
-// }
 
-
-      <Container maxWidth="sm" sx={{ mt: 4 }}>
+<Container maxWidth="sm" sx={{ mt: 4 }}>
       <Typography variant="h4" gutterBottom>
       Add contact
       </Typography>
       <Formik
         initialValues={{ name: "", number: "" }}
         onSubmit={handleSubmit}
-        validationSchema={UserSchema} // Припустимо, що UserSchema - це ваша схема валідації
+        validationSchema={UserSchema} 
       >
         {({ errors, touched, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
@@ -93,6 +55,8 @@ export default function ContactForm() {
                   name="name"
                   error={errors.name && touched.name}
                   helperText={<ErrorMessage name="name" />}
+                  // sx={{ backgroundColor: "#f2f4f8" }}
+                  className={css.textField} 
                 />
               </Grid>
               <Grid item xs={12}>
@@ -103,10 +67,12 @@ export default function ContactForm() {
                   name="number"
                   error={errors.number && touched.number}
                   helperText={<ErrorMessage name="number" />}
+                  // sx={{ backgroundColor: "#f2f4f8" }}
+                  className={css.textField} 
                 />
               </Grid>
               <Grid item xs={12}>
-                <Button variant="contained" type="submit" sx={{ backgroundColor: "#007bff" }}>
+                <Button variant="contained" type="submit" sx={{ backgroundColor: "#1380f4" }}>
                 Add contact
                 </Button>
               </Grid>

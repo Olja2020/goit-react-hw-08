@@ -1,7 +1,4 @@
 //import React from "react";
-//import css from "./ModalWindow.module.css";
-//import { SiVerizon } from "react-icons/si";
-//import { VscChromeClose } from "react-icons/vsc";
 import {
   Dialog,
   DialogTitle,
@@ -12,26 +9,7 @@ import {
 } from "@mui/material";
 export const ModalWindow = ({ isOpen, onClose, children, handleDelete }) => {
   return (
-    //     <>
-    //       {isOpen && (
-    //         <div className={css.modal}>
-    //           <div className={css.wrapper}>
-    //             <div className={css.content}>
-    //               <button className={css.buttonOne} onClick={handleDelete}>
-    //                 <SiVerizon />
-    //               </button>
-    //               <button className={css.buttonTwo} onClick={() => onClose()}>
-    //                 <VscChromeClose />
-    //               </button>
-    //               {children}
-    //             </div>
-    //           </div>
-    //         </div>
-    //       )}
-    //     </>
-    //   );
-    // };
-
+  
     <Dialog open={isOpen} onClose={onClose}>
       <DialogTitle>Видалити контакт</DialogTitle>
       <DialogContent>

@@ -23,20 +23,8 @@ export default function SearchBox() {
         onChange={handleFilter}
         placeholder="Search..."
         variant="outlined"
+        // sx={{ backgroundColor: "#f2f4f8" }}
       />
     </div>
   );
-}
-{
-  /* <div>
-      <p className={css.label}>Find contacts by name/number</p>
-      <input
-        type="text"
-        className={css.inputBox}
-        value={filter}
-        onChange={handleFilter}
-      ></input>
-    </div>
-  );
-} */
 }
