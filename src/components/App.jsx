@@ -6,8 +6,8 @@ import { PrivateRoute } from "./PrivateRoute";
 import { RestrictedRoute } from "./RestrictedRoute";
 import { refreshUser } from "../redux/auth/operations";
 import { selectIsRefreshing } from "../redux/auth/selectors";
-//import ContactsPage from "../pages/contactsPage/ContactsPage";
 
+import {Toaster} from 'react-hot-toast';
 const HomePage = lazy(() => import("../pages/homePage/HomePage"));
 const RegistrationPage = lazy(() =>
   import("../pages/registrationPage/RegistrationPage")
@@ -18,15 +18,18 @@ const ContactsPage = lazy(() => import("../pages/contactsPage/ContactsPage"));
 export const App = () => {
   const dispatch = useDispatch();
   const  isRefreshing  = useSelector(selectIsRefreshing);
-  
-  useEffect(() => {
+    useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
+   
     <b>Refreshing user...</b>
-  ) : (
+  ) : ( 
     <Layout>
+      <Toaster
+      position="bottom-center"
+      reverseOrder={false}/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
@@ -54,3 +57,4 @@ export const App = () => {
     </Layout>
   );
 };
+
